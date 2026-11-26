@@ -2,7 +2,7 @@
 
 Counterpoint is a DeepSpace app for reading a claim against a small set of sources. A signed-in investigation searches for supporting and challenging material, classifies each retrieved excerpt, and lets you relabel or exclude sources before writing a synthesis from what remains.
 
-The front page is a sample board. It does not search and it does not call a model. Open the desk at `/home` to run a real investigation.
+The live app is [https://counterpoint.app.space](https://counterpoint.app.space). The front page is a sample board. It does not search and it does not call a model. Open the desk at `/home` to run a real investigation.
 
 ## Local use
 

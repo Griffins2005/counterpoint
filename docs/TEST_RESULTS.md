@@ -2,11 +2,12 @@
 
 ## Environment
 
-- Commit: recorded by the commit that adds this file. Production deploy follows that commit.
+- Commit: `e75ed5f` for the app. This file's deploy note is updated after that release.
+- Release: `rel_01M8CEXQXMWWTCT87SFYQZ2JY8`
 - DeepSpace SDK version: 0.44.2
 - Node.js version: v26.3.0
 - Test date: 2026-11-26
-- Deployment URL: not deployed at the time of these local and live-dev checks
+- Deployment URL: https://counterpoint.app.space
 - Search integration: `exa/search`
 - LLM integration: `openai/chat-completion`, model `gpt-6-luna`
 
@@ -37,7 +38,9 @@ Playwright covers the static landing, signed-out desk, sample board edits with n
 
 Live desk timing for "Regular physical activity improves cardiovascular health.": the board opened 10.7 seconds after submit. That includes three searches and classification. Synthesis was a later 6.8 second call. Initial page load was not timed separately from the Playwright suite.
 
-These live calls were made on the local dev server and the integration CLI. They are not a production smoke test.
+These live calls were made on the local dev server and the integration CLI.
+
+Production smoke against https://counterpoint.app.space: `/` returned 200 in 0.3 seconds, `/api/auth/ok` returned 200, a direct Exa call returned 403, and a signed-out investigate call returned 401. The sample board hydrated, an exclude updated the reading, and that interaction made no paid request. The document itself arrived in about half a second; the first click has to wait until that script has hydrated.
 
 ## AI evaluation
 
@@ -70,5 +73,5 @@ These live calls were made on the local dev server and the integration CLI. They
 
 ## Release blockers
 
-- Production deploy has not been run yet.
-- The evaluation scorecard is incomplete. That is a documentation gap, not a fabricated citation.
+- No critical or high-severity failure turned up in the checks above.
+- The ten-claim evaluation scorecard is incomplete. That is unfinished review, not a fabricated citation.

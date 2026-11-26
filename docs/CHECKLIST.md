@@ -9,7 +9,7 @@ Status after local tests, one live investigation, and the checks in `TEST_RESULT
 - App name and worker name: `counterpoint`.
 - Official agent skill: not installed. The project instructions say the installed package and CLI are the interface, and the skill is optional.
 - Git history starts with the product commit. An empty deploy before any product code was not done.
-- Production deploy: see `TEST_RESULTS.md` after the release command.
+- Production deploy: https://counterpoint.app.space is serving the release. `/` and `/api/auth/ok` return 200. Direct search returns 403. A signed-out investigation returns 401. The sample board updates without a paid call.
 
 ## Product
 
